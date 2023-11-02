@@ -1,156 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Schedule</title>
-
-    <!-- Meta tags, CSS and JS links from main page -->
-    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Yue Zhao">
     <meta name="description" content="Course website of CSCI 566 AT USC">
     <meta name="keywords" content="machine learning, data mining, csci566, usc, Yue Zhao">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
+    <!-- Title and Favicon -->
+    <title>CSCI 566 Deep Learning and its Applications</title>
+    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #e9ecef;
-            color: #333;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #e9ecef;
-        }
-
-        td a {
-            display: inline-block;
-            margin: 0 5px;
-            padding: 5px 10px;
-            border: 1px solid #007bff;
-            border-radius: 3px;
-            color: #007bff;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        td a:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .module-title {
-            background-color: #cce5ff;
-            padding: 5px;
-            font-weight: bold;
-        }
-    </style>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
+    <style>
+
+        body {
+            font-family: 'Roboto', serif;
+        }
+        /* Global Styles */
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        .university-color {
+            color: #990000;
+        }
+
+        .link-list a {
+            margin-right: 5px;
+        }
+
+        /* Staff Container Styles */
+        .staff-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .staff-member {
+            width: 23%;
+            text-align: center;
+            margin: 15px 1%;
+            box-sizing: border-box;
+        }
+
+        .staff-member img {
+            width: 80%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .staff-member h2, .staff-member p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 1024px) {
+            .staff-member {
+                width: 48%;
+                margin: 15px 1%;
+            }
+
+            .staff-member img {
+                width: 70%;
+                max-width: 130px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .staff-member {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .staff-member img {
+                width: 60%;
+                max-width: 120px;
+            }
+    </style>
+
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">CSCI 566 Machine Learning Spring 2024</a>
-            </div>
 
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="schedule.html">Course Schedule</a></li>
-                    <li><a href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
+            <!-- Navbar header -->
+            <a class="navbar-brand" href="#">CSCI 566 Deep Learning and its Applications</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav custom-spacing">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Course Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container">
+<div class="container">
     <h1>Schedule</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Lecture</th>
-                <th>Homework / Readings</th>
-                <th>Logistics</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="module-title" colspan="4">Module 1: Deep Learning Basics</td>
-            </tr>
-            <tr>
-                <td>1/12</td>
-                <td>Lecture 1 (Yue Zhao): Course Introduction<br><a href="#">slides</a> | <a href="#">video</a></td>
-                <td>TBD</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>1/19</td>
-                <td>Lecture 2: Framing Problems for ML + Loss functions and Optimization<br><a href="#">slides</a> | <a href="#">video</a></td>
-                <td>TBD</td>
-                <td></td>
-            </tr>
-<!--            <tr>-->
-<!--                <td>1/26</td>-->
-<!--                <td>No Class</td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>2/3</td>-->
-<!--                <td>Lecture 3 (Yue Zhao): Neural Network Overview + Convolutional Neural Networks<br><a href="#">slides</a> | <a href="#">video</a></td>-->
-<!--                <td></td>-->
-<!--                <td>Project Team Due</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>2/10</td>-->
-<!--                <td>Lecture 4 (Yue Zhao): Activations, Initializations, Optimization, and Regularization + Software Tutorials (by TAs)<br><a href="#">slides</a> | <a href="#">video</a></td>-->
-<!--                <td>Assignment 1 OUT</td>-->
-<!--                <td>PyTorch Tutorial Notebook</td>-->
-<!--            </tr>-->
-        </tbody>
-    </table>
-    </div>>
+    <div class="table-responsive">
+        <table class="table table-bordered"> <!-- Added table-bordered class -->
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Lecture</th>
+                    <th>Homework / Readings</th>
+                    <th>Logistics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                     <td class="module-title text-center" colspan="4">Module 1: Deep Learning Basics</td>
+                </tr>
+                <tr>
+                    <td>1/12</td>
+                    <td>Lecture 1 (Yue Zhao): Course Introduction<br><a href="#">slides</a> | <a href="#">video</a></td>
+                    <td>TBD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1/19</td>
+                    <td>Lecture 2: Framing Problems for ML + Loss functions and Optimization<br><a href="#">slides</a> | <a href="#">video</a></td>
+                    <td>TBD</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 
     <footer style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 2px solid #e5e5e5; margin-top: 50px;">
         <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #555;">CSCI 566 Deep Learning and its Applications Spring 2024</h3>
