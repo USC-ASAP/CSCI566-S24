@@ -1,242 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <!-- Meta Information -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Yue Zhao">
-    <meta name="description" content="Course website of CSCI 566 AT USC">
-    <meta name="keywords" content="machine learning, data mining, csci566, usc, Yue Zhao">
-
-    <!-- Title and Favicon -->
-    <title>CSCI 566 Deep Learning and its Applications</title>
-    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-
-
-<body>
-    <style>
-
-        body {
+    <head>
+        <!-- Meta Information -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Yue Zhao">
+        <meta name="description" content="Course website of CSCI 566 AT USC">
+        <meta name="keywords" content="machine learning, data mining, csci566, usc, Yue Zhao">
+        <!-- Title and Favicon -->
+        <title>CSCI 566 Deep Learning and its Applications</title>
+        <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <style>
+            body {
             font-family: 'Roboto', serif;
-        }
-        /* Global Styles */
-        h1, h2, h3 {
+            }
+            /* Global Styles */
+            h1, h2, h3 {
             text-align: center;
-        }
-
-        .university-color {
+            }
+            .university-color {
             color: #990000;
-        }
-
-        .link-list a {
+            }
+            .link-list a {
             margin-right: 5px;
-        }
-
-        /* Staff Container Styles */
-        .staff-container {
+            }
+            /* Staff Container Styles */
+            .staff-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             margin: 20px;
-        }
-
-        .staff-member {
+            }
+            .staff-member {
             width: 23%;
             text-align: center;
             margin: 15px 1%;
             box-sizing: border-box;
-        }
-
-        .staff-member img {
+            }
+            .staff-member img {
             width: 80%;
             max-width: 150px;
             height: auto;
             border-radius: 50%;
             margin-bottom: 10px;
-        }
-
-        .staff-member h2, .staff-member p {
+            }
+            .staff-member h2, .staff-member p {
             margin: 5px 0;
-        }
-
-        /* Responsive Styles */
-        @media only screen and (max-width: 1024px) {
+            }
+            /* Responsive Styles */
+            @media only screen and (max-width: 1024px) {
             .staff-member {
-                width: 48%;
-                margin: 15px 1%;
+            width: 48%;
+            margin: 15px 1%;
             }
-
             .staff-member img {
-                width: 70%;
-                max-width: 130px;
+            width: 70%;
+            max-width: 130px;
             }
-        }
-
-        @media only screen and (max-width: 768px) {
+            }
+            @media only screen and (max-width: 768px) {
             .staff-member {
-                width: 100%;
-                margin: 15px 0;
+            width: 100%;
+            margin: 15px 0;
             }
-
             .staff-member img {
-                width: 60%;
-                max-width: 120px;
+            width: 60%;
+            max-width: 120px;
             }
-    </style>
-
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-
-            <!-- Navbar header -->
-            <a class="navbar-brand" href="#">CSCI 566 Deep Learning and its Applications</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </style>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container">
+                <!-- Navbar header -->
+                <a class="navbar-brand" href="#">CSCI 566 Deep Learning and its Applications</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav custom-spacing">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="schedule.html">Course Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav custom-spacing">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="schedule.html">Course Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Content -->
+        <div class="container">
+            <h2>CSCI 566 Deep Learning and its Applications Spring 2024 <a href="mailto:usc.csci566@gmail.com" style="color: #888; text-decoration: none;">usc.csci566@gmail.com</a></h2>
+            <div style="text-align: center;">
+                <img width="400" src="images/usc-banner.png">
+            </div>
+            <div class="col" style="margin-top:3%; text-align:left;">
+                <p><strong class="university-color">To Students</strong>: The course website is still <strong>under construction</strong>; please check back frequently and the content is subject to change, especially the schedule.
+                </p>
+                <p><strong class="university-color">Overview</strong>: The major objective of this course is to introduces the fundamental concepts of machine learning (ML) and deep learning (DL), covering essential mathematical knowledge for classical ML and DL methods.  Students will explore cutting-edge DL applications in computer vision and natural language processing, and see how these technologies revolutionize real-world applications such as image recognition, autonomous vehicles, and more. Through practical assignments and a final project, with the option to select their own topics or choose from a provided list, students will gain hands-on experience solving problems using ML and DL technologies.
+                </p>
+                <p><strong class="university-color">Special Notice</strong>: This course is a transitional course – it will be refactored in Fall 2024. To ensure a smooth transition, we cover more general ML than its earlier version. Although we still emphasize deep learning, we will use substantial time on general ML and other cool things.
+                </p>
+                <p><strong class="university-color">Prerequisites</strong>:
+                    (1) Proficiency in Python
+                    (2) College Calculus, Linear Algebra, Probability and Statistics
+                    (3) (Recommended but not required) Equivalent knowledge of <a href="https://vatsalsharan.github.io/fall22.html">CSCI 567 (Machine Learning)</a>
+                </p>
+                <p><strong class="university-color">Basic logistics</strong>:</p>
+                <ul>
+                    <li><strong>Syllabus:</strong> <a href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
+                    <li><strong>Time:</strong> Fridays, 1:00pm-4:20pm PST</li>
+                    <li><strong>Location:</strong> THH 201</li>
+                    <li><strong>Discussion:</strong> <a href="https://piazza.com/usc/spring2024/csci566/info " target="_blank">Piazza</a></li>
+                    <li><strong>Contact:</strong> Students should use <a href="https://piazza.com/usc/spring2024/csci566/info " target="_blank">Piazza</a> for any course-related questions. For external inquiries, personal matters, or emergencies, you can email the CSCI 566 staff at <a href="mailto:usc.csci566@gmail.com">usc.csci566@gmail.com</a>. Please do <em>not</em> email any of the CSCI 566 staff individually.</li>
+                    <li><strong class="university-color">New Cool Stuff</strong>: I will aim to bring someone to each lecture from industry, academia, and more to discuss their life in ML and Data Science – this session will be interactive, and I hope to be helpful for your career planning.
                 </ul>
             </div>
+            <hr>
+            <div class="staff-container">
+                <!-- Professor -->
+                <div class="staff-member">
+                    <img src="images/yue.jpg" alt="Prof. Yue Zhao">
+                    <h3>Instructor</h3>
+                    <p>Prof. Yue Zhao</p>
+                    <p>OH: TBA</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 1">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 1</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 2">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 2</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 3">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 3</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 4">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 4</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 5">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 5</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 6">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 6</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+                <!-- Teaching Assistant 1 -->
+                <div class="staff-member">
+                    <img src="images/ta.png" alt="TA 7">
+                    <h3>Teaching Assistant</h3>
+                    <p>TA 7</p>
+                    <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-        <h1>CSCI 566 Deep Learning and its Applications Spring 2024</h1>
-        <div style="text-align: center;">
-            <img width="400" src="images/usc-banner.png">
         </div>
-        <div class="col" style="margin-top:3%; text-align:left;">
-            <p><strong class="university-color">To Students</strong>: The course website is still <strong>under construction</strong>; please check back frequently and the content is subject to change, especially the schedule.
-            </p>
-
-            <p><strong class="university-color">Overview</strong>: The major objective of this course is to introduces the fundamental concepts of machine learning (ML) and deep learning (DL), covering essential mathematical knowledge for classical ML and DL methods.  Students will explore cutting-edge DL applications in computer vision and natural language processing, and see how these technologies revolutionize real-world applications such as image recognition, autonomous vehicles, and more. Through practical assignments and a final project, with the option to select their own topics or choose from a provided list, students will gain hands-on experience solving problems using ML and DL technologies.
-            </p>
-
-            <p><strong class="university-color">Special Notice</strong>: This course is a transitional course – it will be refactored in Fall 2024. To ensure a smooth transition, we cover more general ML than its earlier version. Although we still emphasize deep learning, we will use substantial time on general ML and other cool things.
-            </p>
-
-            <p><strong class="university-color">Prerequisites</strong>:
-                (1) Proficiency in Python
-                (2) College Calculus, Linear Algebra, Probability and Statistics
-                (3) (Recommended but not required) Equivalent knowledge of <a href="https://vatsalsharan.github.io/fall22.html">CSCI 567 (Machine Learning)</a>
-
-            </p>
-
-            <p><strong class="university-color">Basic logistics</strong>:</p>
-            <ul>
-            <li><strong>Syllabus:</strong> <a href="https://docs.google.com/document/d/15o0ZuBrpOlKZdMKj1vlVhp0mmDtdjCgMXEonVB-njbI/edit?usp=sharing">Syllabus (USC login required)</a></li>
-            <li><strong>Time:</strong> Fridays, 1:00pm-4:20pm PST</li>
-            <li><strong>Location:</strong> THH 201</li>
-            <li><strong>Discussion:</strong> <a href="https://piazza.com/usc/spring2024/csci566/info " target="_blank">Piazza</a></li>
-            <li><strong>Contact:</strong> Students should use <a href="https://piazza.com/usc/spring2024/csci566/info " target="_blank">Piazza</a> for any course-related questions. For external inquiries, personal matters, or emergencies, you can email the CSCI 566 staff at <a href="mailto:usc.csci566@gmail.com">usc.csci566@gmail.com</a>. Please do <em>not</em> email any of the CSCI 566 staff individually.</li>
-            <li><strong class="university-color">New Cool Stuff</strong>: I will aim to bring someone to each lecture from industry, academia, and more to discuss their life in ML and Data Science – this session will be interactive, and I hope to be helpful for your career planning.
-            </ul>
-
-        </div>
-
-
-   <hr>
-    <div class="staff-container">
-        <!-- Professor -->
-        <div class="staff-member">
-            <img src="images/yue.jpg" alt="Prof. Yue Zhao">
-            <h3>Instructor</h3>
-            <p>Prof. Yue Zhao</p>
-            <p>OH: TBA</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 1">
-            <h3>Teaching Assistant</h3>
-            <p>TA 1</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 2">
-            <h3>Teaching Assistant</h3>
-            <p>TA 2</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 3">
-            <h3>Teaching Assistant</h3>
-            <p>TA 3</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 4">
-            <h3>Teaching Assistant</h3>
-            <p>TA 4</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 5">
-            <h3>Teaching Assistant</h3>
-            <p>TA 5</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 6">
-            <h3>Teaching Assistant</h3>
-            <p>TA 6</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-
-        <!-- Teaching Assistant 1 -->
-        <div class="staff-member">
-            <img src="images/ta.png" alt="TA 7">
-            <h3>Teaching Assistant</h3>
-            <p>TA 7</p>
-            <p>OH: Wednesdays 3-4pm, RTH 4th Floor</p>
-        </div>
-    </div>
-    </div>
-
-    </div>
-
-    <footer style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 2px solid #e5e5e5; margin-top: 50px;">
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #555;">CSCI 566 Deep Learning and its Applications Spring 2024</h3>
-        <p style="font-size: 15px;"><a href="mailto:usc.csci566@gmail.com" style="color: #888; text-decoration: none;">usc.csci566@gmail.com</a></p>
-        <hr style="width: 50%; margin: 20px auto; border-color: #e5e5e5;">
-        <p style="font-family: 'Oswald', sans-serif; font-size: 15px; color: #555;">© Copyright 2024 University of Southern California.</p>
-        <p style="font-family: 'Oswald', sans-serif; font-size: 15px; color: #555;">Written by Yue Zhao and ChatGPT from scratch! <a href="https://github.com/USC-ASAP/CICS566-S24" target="_blank" style="color: #888; text-decoration: none;">Reuse our code</a>.</p>
-    </footer>
-
-
-</body>
-
-
-
+        <footer style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 2px solid #e5e5e5; margin-top: 50px;">
+            <p style="font-family: 'Oswald', sans-serif; font-size: 15px; color: #555;">© Copyright 2024 University of Southern California.</p>
+            <p style="font-family: 'Oswald', sans-serif; font-size: 15px; color: #555;">Written by Yue Zhao and ChatGPT from scratch! <a href="https://github.com/USC-ASAP/CICS566-S24" target="_blank" style="color: #888; text-decoration: none;">Reuse our code</a>.</p>
+        </footer>
+    </body>
 </html>
